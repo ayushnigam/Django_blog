@@ -1,0 +1,18 @@
+<body style="background-image:url('http://feelgrafix.com/data_images/out/3/753934-blue-background.jpg'); background-size:cover;">
+
+{% extends "base.html" %}
+{% block content %}
+
+{% for post in object_list %}
+<h3>{{post.title}}</h3>
+<div class = "post_meta">
+	on {{ post.date }}
+</div>
+
+<div class = "post_body">
+{{ post.body|safe|linebreaks}}
+</div>
+
+{% endfor %}
+{% endblock %}
+</body>
